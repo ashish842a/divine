@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Divine Restaurant</title>
+</head>
+<body >
+    <div class="loader-pre">
+        <div class="loader"></div>
+    </div>
+    <div id="main" >
+        <!-- homepage -->
+        <div id="homepage">
+           <!-- confirm form -->
+
+            <div class="topnav">
+                <i id="menu" class="ri-menu-4-fill"></i>
+                <div class="logo">
+                    <h2 id="divine">DIVINE RESTAURANT</h2>
+                    <!-- <p>helo</p> -->
+                </div>
+                <% if(user=== null){ %>
+                    <div class="wrap">
+                         <button class="btn act" id="act"> <a style="color: black;" href="/register"> Sign Up</a></button>
+                         <button class="btn"><a href="/login">Log In</a></button>
+                    </div>
+                    
+                  
+                <% } else { %>
+                  <div class="wrap">
+                    Hey <%= user.name.toUpperCase() %> &nbsp;&nbsp;
+                    <!-- <button class="lbtn"><a href="/cart">Add to cart</a></button> -->
+                    <button class="btn"><a href="/logout">Logout</a></button>
+                  </div>
+
+                    <!-- <li class="navlist-item user">
+                        <a href="/user/<%= user.id %> "></i> </a>
+                      </li> -->
+               <% } %>
+                <!-- <button class="btn_1"><a href="/register">SING IN</a></button> -->
+            </div>
+            <div class="nav">
+                <div id="close"><i class="ri-close-line"></i></div>
+                <div class="nav_content">
+                    <ul>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="/menu">Our Menus</a></li>
+                        <li><a href="cart">Cart</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                    <button  class="btn_1">Book Your Table</button>
+                    <div class="links">
+                        <i class="ri-facebook-circle-fill"></i>
+                        <i class="ri-instagram-fill"></i>
+                        <i class="ri-twitter-fill"></i>
+                        <i class="ri-pinterest-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="heading">
+                <h1>
+                    WELCOME TO THE DIVINE RESTAURANT
+                </h1>
+                <div class="btns">
+                    <button class="btn"><a href="/menu">View Menu</a></button>
+                    <button   class="btn act" id="act">Find A Table</button>
+                </div>
+            </div>
+            <div class="waves">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#fff" fill-opacity="0.4" d="M0,256L34.3,240C68.6,224,137,192,206,192C274.3,192,343,224,411,245.3C480,267,549,277,617,266.7C685.7,256,754,224,823,197.3C891.4,171,960,149,1029,165.3C1097.1,181,1166,235,1234,240C1302.9,245,1371,203,1406,181.3L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="0.7" d="M0,192L30,197.3C60,203,120,213,180,224C240,235,300,245,360,234.7C420,224,480,192,540,192C600,192,660,224,720,229.3C780,235,840,213,900,186.7C960,160,1020,128,1080,133.3C1140,139,1200,181,1260,197.3C1320,213,1380,203,1410,197.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="0.5" d="M0,128L40,122.7C80,117,160,107,240,138.7C320,171,400,245,480,266.7C560,288,640,256,720,256C800,256,880,288,960,282.7C1040,277,1120,235,1200,202.7C1280,171,1360,149,1400,138.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="0.8" d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,245.3C672,235,768,181,864,186.7C960,192,1056,256,1152,272C1248,288,1344,256,1392,240L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            </div>     
+        </div>
+        <!-- homepage ends -->
+        <div class="second_sec"> 
+            <h4>PATIO TIME SEAFOOD PHILOSOPHY</h4> 
+            <h2>SEAFOOD IS OUR PASSION, FRESHNESS IS OUR MISSION, AND QUALITY IS OUR COMMITMENT</h2>           
+            <h3>PLEASE READ OUR COVID-19 DINING POLICY</h3> 
+            <button class="btn">Explore More</button>
+        </div> 
+        <!-- third edn -->
+        <div class="third_sec">
+            <!-- sec1 starts-->
+            <div class="sec"> 
+                <div class="left"> 
+                    <div class="image"> 
+                        <img src="https://i.pinimg.com/474x/95/a2/81/95a2816c2e440a9ca986a0cff8ab402f.jpg" alt=""> 
+                    </div> 
+                </div> 
+                <div class="right"> 
+                    <div class="box"> 
+                        <h3>ABOUT PATIOTIME SEAFOOD</h3> 
+                        <h1>OUR STORY</h1> 
+                        <p>Food is the foundation of true happiness. Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean commodo.</p> 
+     
+                        <p>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <button class="btn">DISCOVER MORE</button> 
+                    </div> 
+                </div> 
+            </div> 
+            <!-- sec1 end  --> 
+
+            <!-- sec2 starts-->
+            <div class="sec"> 
+                <div class="left"> 
+                    <div class="box"> 
+                        <h3>WE SERVE FRESHEST CATCHES</h3> 
+                        <h1>OUR MENU</h1> 
+                        <p>The best of local produce, fish and seafood caught off the South West coast. Our menus change twice daily depending on what the fishermen have brought in to us. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <p>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <button class="btn">DISCOVER MORE</button> 
+                    </div> 
+                </div> 
+                <div class="right"> 
+                    <div class="image"> 
+                        <img src="https://i.pinimg.com/474x/95/a2/81/95a2816c2e440a9ca986a0cff8ab402f.jpg" alt=""> 
+                    </div> 
+                    
+                </div> 
+            </div> 
+            <!-- sec2 end --> 
+     
+            <!-- sec3 starts-->
+            <div class="sec"> 
+                <div class="left"> 
+                    <div class="image"> 
+                        <img src="https://i.pinimg.com/474x/95/a2/81/95a2816c2e440a9ca986a0cff8ab402f.jpg" alt=""> 
+                    </div> 
+                </div> 
+                <div class="right"> 
+                    <div class="box"> 
+                        <h3>ABOUT PATIOTIME SEAFOOD</h3> 
+                        <h1>OUR STORY</h1> 
+                        <p>Food is the foundation of true happiness. Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean commodo.</p> 
+     
+                        <p>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget.</p> 
+     
+                        <button class="btn">DISCOVER MORE</button> 
+                    </div> 
+                </div> 
+            </div> 
+            <!-- sec3 end --> 
+     
+            <!-- sec4 starts-->
+            <div class="sec"> 
+                <div class="left"> 
+                    <div class="box"> 
+                        <h3>WE SERVE FRESHEST CATCHES</h3> 
+                        <h1>OUR MENU</h1> 
+                        <p>The best of local produce, fish and seafood caught off the South West coast. Our menus change twice daily depending on what the fishermen have brought in to us. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <p>We see our customers as invited guests to a party,and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <button class="btn">DISCOVER MORE</button> 
+                    </div> 
+                </div> 
+                <div class="right"> 
+                    <div class="image"> 
+                        <img src="https://i.pinimg.com/474x/95/a2/81/95a2816c2e440a9ca986a0cff8ab402f.jpg" alt=""> 
+                    </div> 
+                    
+                </div> 
+            </div> 
+            <!-- sec4 end --> 
+     
+            <!-- sec5 starts-->
+            <div class="sec"> 
+                <div class="left"> 
+                    <div class="image"> 
+                        <img src="https://i.pinimg.com/474x/95/a2/81/95a2816c2e440a9ca986a0cff8ab402f.jpg" alt=""> 
+                    </div> 
+                </div> 
+                <div class="right"> 
+                    <div class="box"> 
+                        <h3>ABOUT PATIOTIME SEAFOOD</h3> 
+                        <h1>OUR STORY</h1> 
+                        <p>Food is the foundation of true happiness. Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean commodo.</p> 
+     
+                        <p>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu integer tincidunt cras dapibus.</p> 
+     
+                        <button class="btn">DISCOVER MORE</button> 
+                    </div> 
+                </div> 
+            </div> 
+            <!-- sec5 end -->
+        </div>
+         <!-- third_sec edn -->
+         <!-- <div class="footer-image">
+            <img src="/images/img.png" alt="">
+         </div> -->
+         <!-- <div class="waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="blue" fill-opacity="0.4" d="M0,256L34.3,240C68.6,224,137,192,206,192C274.3,192,343,224,411,245.3C480,267,549,277,617,266.7C685.7,256,754,224,823,197.3C891.4,171,960,149,1029,165.3C1097.1,181,1166,235,1234,240C1302.9,245,1371,203,1406,181.3L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="blue" fill-opacity="0.7" d="M0,192L30,197.3C60,203,120,213,180,224C240,235,300,245,360,234.7C420,224,480,192,540,192C600,192,660,224,720,229.3C780,235,840,213,900,186.7C960,160,1020,128,1080,133.3C1140,139,1200,181,1260,197.3C1320,213,1380,203,1410,197.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="blue" fill-opacity="0.5" d="M0,128L40,122.7C80,117,160,107,240,138.7C320,171,400,245,480,266.7C560,288,640,256,720,256C800,256,880,288,960,282.7C1040,277,1120,235,1200,202.7C1280,171,1360,149,1400,138.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="blue" fill-opacity="0.8" d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,245.3C672,235,768,181,864,186.7C960,192,1056,256,1152,272C1248,288,1344,256,1392,240L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>   -->
+    
+        <%- include partials/footer.ejs %>
+        
+    </div>
+    
+    <!-- script file -->
+    <script src="https://unpkg.com/@barba/core"></script>
+<script>
+    // barba.init()
+
+        // window.addEventListener("DOMContentLoaded",function(){
+        //          setTimeout(function(){
+
+        //     document.querySelector(".loader-pre").style.display = "none";
+        //     // document.querySelector("#main").style.display = "initial";
+        // },1000)
+        //     // document.querySelector(".loader-pre").style.display = "none";
+        // })
+    window.onload = function(){
+            //hide the preloader
+    setTimeout(function(){
+        
+        document.querySelector(".loader-pre").style.display = "none";
+    },200)
+}
+
+
+    document.querySelector("#act").addEventListener("click",function(){
+    console.log("click");
+    document.querySelector(".bookTable").style.display="initial";
+
+    })
+
+
+    document.querySelector("#close-form").addEventListener("click",function(){
+    console.log("click");
+    document.querySelector(".bookTable").style.display="none";
+    })
+
+</script>
+
+
+<script src="/javascripts/script.js"></script>
+</body>
+</html>

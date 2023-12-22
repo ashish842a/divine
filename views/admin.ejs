@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   
+  </head>
+  <body>
+    <div class="container">
+      <div class="row px-3">
+          <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+              <div class="img-left d-none d-md-flex"></div> 
+
+                  <div class="card-body p-4">
+                      <h4 class="title text-center mt-4">Admin Dashboard</h4>
+                      <form action="/addfood" method="post" enctype="multipart/form-data" class="form-box px-3">
+
+                          <div class="form-input">
+                              <select id="dishes" name="type">
+                                  <option value="dishes">Enter type of dish</option>
+                                  <option value="starter">Starter</option>
+                                  <option value="maincourse">Main Course</option>
+                                  <option value="dessert">Desert</option>
+                                </select>
+                          </div>
+
+                          <div class="form-input">
+                              <input type="text" name="name" placeholder="Enter dish name">
+                          </div>
+                          
+                          <div class="form-input">
+                              <input type="text" name="details" placeholder="Enter details of the dish">
+                          </div>
+
+                          <div class="form-input">
+                              <input type="number" name="price" placeholder="Enter price of the dish">
+                          </div>
+                          
+
+                          <div class="form-input-image">
+                              <h6>Choose an image</h6>
+                              <input type="file" name="image">       
+                          </div>
+                           
+                          <div class="col-12 text-center p-4">
+                             <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+                          </div>
+                        </form>
+
+                        <button><a href="/adminlogin">Logout</a></button>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- <form action="/addfoodets" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="radio" id="Maincourse" name="type" value="maincourse">
+        <label for="Maincourse">Maincourse</label><br>
+        <input type="radio" id="Dessert" name="type" value="dessert">
+        <label for="Dessert">Dessert</label><br>
+        <input type="radio" id="Starter" name="type" value="starter">
+        <label for="Starter">Starter</label><br><br>
+        <input type="text" class="form-control-file" name="name" placeholder="Enter food name"><br><br>
+        <input type="text" class="form-control-file" name="details" placeholder="Enter food details"><br> <br>
+        <input type="number" class="form-control-file" name="price" placeholder="Enter price"><br> <br>
+
+                <input type="file" class="form-control-file" name="image"><br><br>        
+    <button type="submit">Submit</button>
+    </form>
+     -->
+  </body>
+</html>

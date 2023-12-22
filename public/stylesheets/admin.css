@@ -1,0 +1,82 @@
+body{
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/restaurant-blur-background-design-resource_236836-16729.jpg?w=2000") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 1rem 1rem rgb(56, 56, 56);
+    height: 85vh;
+}
+.img-left{
+    width: 45%;
+    background: url(https://i.pinimg.com/564x/8c/79/ad/8c79ad83c69ceda5379e9e3dee683e43.jpg) center;
+    /* background: url("https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?cs=srgb&dl=pexels-chan-walrus-941861.jpg&fm=jpg") center; */
+    background-size: cover;
+}
+.card-body{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.form-input{
+    position: relative;
+}
+.msg{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.form-input {
+	padding: 7px 0px;	
+	position: relative;	
+}
+
+
+.form-input input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	width: 100%;
+	transition: .2s;
+}
+.form-input input:focus {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	width: 100%;
+	transition: .2s;
+}
+.form-input select{
+    border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	width: 100%;
+	transition: .2s;
+}
+h6{
+    padding-top: 8px;
+    color: grey;
+    
+}
+.form-input-image{
+    padding-left: 24px;
+}

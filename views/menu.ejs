@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Food Menu</title>
+</head>
+<body>
+    <div class="menu-back">
+      <%- include ./partials/nav %>
+            <h2>Menu</h2>
+    </div>
+    <div class="menu-heading">
+        <h6>STARTERS</h6>
+    </div>
+    <div class="menus">
+        <div class="menu-column">
+            <%viewfood.forEach(function(elem){ %>
+                <div class="single-menu">
+                    <div class="box">
+                        <img src="/images/uploads/<%=elem.addfoodPic%>" alt="">
+                        <div class="menu-content">
+                            <h5><%=elem.name%> <span>$<%=elem.price%></span></h5>
+                            <p><%=elem.details%> </p>
+                        </div>
+                    </div>
+                        <button class="btn"><a href="/cart/<%=elem.id%>@<%=elem.type%>">Add</a></button>
+                </div>
+                  <% }) %>
+        </div>
+    </div>
+
+    <!-- main section -->
+
+    <div class="main-course-menu-back"></div>
+
+    <div class="menu-heading">
+        <h6>MAIN COURSE</h6>
+    </div>
+    <div class="menus">
+        <div class="menu-column">
+            <%viewmaincourse.forEach(function(elem){ %>
+                <div class="single-menu">
+                    <div class="box">
+                        <img src="/images/uploads/<%=elem.addfoodPic%>" alt="">
+                        <div class="menu-content">
+                            <h5><%=elem.name%> <span>$<%=elem.price%></span></h5>
+                            <p><%=elem.details%> </p>
+                        </div>
+                    </div>
+                    <button class="btn"><a href="/cart/<%=elem.id%>@<%=elem.type%>">Add</a></button>
+                </div>
+                  <% }) %>
+        </div>
+    </div>
+
+    <!-- deserts -->
+
+    <div class="desert-menu-back"></div>
+    <div class="menu-heading">
+        <h6>DESSERT</h6>
+    </div>
+    <div class="menus">
+        <div class="menu-column">
+            <%viewdessert.forEach(function(elem){ %>
+                <div class="single-menu">
+                    <div class="box">
+                        <img src="/images/uploads/<%=elem.addfoodPic%>" alt="">
+                        <div class="menu-content">
+                            <h5><%=elem.name%> <span>$<%=elem.price%></span></h5>
+                            <p><%=elem.details%> </p>
+                        </div>
+                    </div>
+                    <button class="btn"><a href="/cart/<%=elem.id%>@<%=elem.type%>">Add</a></button>
+                </div>
+            <% }) %>
+          
+        </div>
+    </div>
+
+
+   
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menunav");
+          if (x.className === "menu-nav") {
+            x.className += " responsive";
+          } else {
+            x.className = "menu-nav";
+          }
+        }
+        document.querySelector(".btn").addEventListener("click",function(dets) {
+            console.log(dets);
+        })
+        </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
+
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
+</script>
+
+
+</body>
+</html>

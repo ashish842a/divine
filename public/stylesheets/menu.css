@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Beau+Rivage&family=Bitter:wght@100&family=Cormorant+Upright:wght@300;600&family=Grape+Nuts&family=Italiana&family=Josefin+Sans:wght@100&family=Josefin+Slab:wght@100&family=Montserrat:wght@100&family=Nunito+Sans:wght@200&family=Oswald:wght@200&family=Roboto+Condensed:wght@300&family=Square+Peg&family=Tapestry&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* body::-webkit-scrollbar {
+    display: none;
+  } */
+.menu-back{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)),
+                 url("https://images.unsplash.com/photo-1551881192-002e02ad3d87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+.menu-back h2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 9vw;
+    color: white;
+}
+
+.menu-nav {
+    position: relative;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.679);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding:0 30px;
+  }
+.menu-nav .links, .btns{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.menu-nav .btns i{
+  font-size:20px;
+}  
+  .menu-nav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .menu-nav button{
+    padding:6px 8px;
+    background-color:transparent;
+    border: 1px solid white;
+    /* float: right; */
+  }
+  .menu-nav button:hover{
+     background-color: orangered;
+     border: 1px solid orangered;
+  }
+  .menu-nav button:hover a{
+    color: #ffffff;
+  }
+  .menu-nav button a{
+   color: #f2f2f2;
+   text-decoration: none;
+   font-size: 16px;
+   padding: 6px;
+   padding-left: 4px;
+   text-align: center;
+
+  }
+  .menu-nav a:hover {
+    color: orangered;
+  }
+  
+  .menu-nav a.active {
+    color: white;
+  }
+  
+  .menu-nav .icon {
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    display: none;
+  }
+  .menu-heading{
+    text-align: center;
+    font-size: 5vw;
+    margin-top:50px;
+  }
+  .menus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px 0;
+  }
+  .menu-column {
+     display:grid;
+     width: 80vw;
+     grid-template-columns: 1fr 1fr;
+     gap:0 5rem;
+     margin: 0 auto;
+     padding:0 20px;
+  }
+  .menu-column h4 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .menu-column h4:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #00875c;
+    bottom: 0;
+  }
+  .single-menu .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2vw;
+  }
+  .single-menu .btn{
+    cursor: pointer;
+    border: none;
+    height:40px;
+    width: 60px;
+    background-color: #0d9235;  
+    color: #ffffff;
+  }
+  .single-menu .btn a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .single-menu {
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+    padding-right:0.2rem;
+  }
+  .single-menu img {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #ddd;
+    padding: 3px;
+    margin-right: 15px;
+    transition: .3s;
+  }
+  .single-menu img:hover{
+      transform: rotate(90deg);
+  }
+  .menu-content{
+    min-width: 240px;
+  }
+  .single-menu .menu-content h5 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px dashed #222;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .single-menu .menu-content h5 span {
+    color: tomato;
+    float: right;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+.main-course-menu-back{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)),url("https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg");
+    min-height: 95vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.desert-menu-back{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1532013801757-9d3c67111783?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    min-height: 95vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+  
+  @media screen and (max-width: 700px) {
+    .menu-nav {
+      flex-direction: column;
+    }
+    .menu-nav .links, .btns{
+      display: flex;
+      flex-direction: column;
+      gap:0;
+    }
+    .menu-nav a {display: none;}
+    .menu-nav a.icon {
+      display: block;
+    }
+    .menu-nav button{
+        display: none;
+    }
+    .menu-back h2{
+        font-size: 60px;    
+    }
+  }
+
+  
+  @media screen and (max-width: 700px) {
+    .menu-nav.responsive {position: relative;
+      height: fit-content;}
+    .menu-nav.responsive a {
+      float: none;
+      display: inline-block;
+    }
+    .menu-nav.responsive button{
+        display: block;
+        border: none;
+    }
+  }
+
+  @media screen and (min-width:950px) and (max-width:1200px){
+    .menu-column {
+       width: 100%;
+       padding: 0 6vw;
+       gap:0 2.5vw;
+    }
+  }
+  @media screen and (max-width:950px){
+    .menu-heading{
+      font-size: 50px;
+    }
+    
+    .menu-column {
+       display:flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap:0;
+    }
+  }

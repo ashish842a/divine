@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <h1>Logo</h1>
+           </div>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="/profile">
+                <i class="ri-home-3-line"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item ">
+              <a href="/dashboard">
+                <i class="ri-user-3-line"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="/dashboard-order">
+                <i class="ri-shopping-bag-3-line"></i>
+                <span>Order</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="/contact">
+                <i class="ri-phone-fill"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="/menu">
+                <!-- <i class="ri-book-2-line"></i> -->
+                <i class="ri-book-read-line"></i>
+                <span>Menu</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="/cart">
+                <i class="ri-shopping-cart-line"></i>
+                <span>My Cart</span>
+              </a>
+            </li>
+          </ul>
+          <div class="account-info">
+            <div class="account-info-picture">
+              <img src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHx3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Account">
+             
+            </div>
+            <div class="account-info-name">MY NAME</div>
+          </div>
+        </div>
+
+          <div class="app-content">
+            <div class="app-content-header">
+             <div class="app-icon">
+               <i class="ri-menu-line"></i>
+             </div>
+              <h1 class="app-content-headerText">Profile</h1>
+              <button class="mode-switch" title="Switch Theme">
+                <i class="ri-moon-fill"></i>
+              </button>
+              <button class="btn"><a href="/logout">Log Out</a></button>
+            </div>
+            <div class="app-content-actions" style="display:none;">
+              
+                <div class="app-content-actions-wrapper">
+                  <div class="filter-button-wrapper">
+                    <button class="action-button filter jsFilter"><span>Filter</span></button>
+                  </div>
+                  <button class="action-button list active" title="List View">
+                    
+                  </button>
+                  <button class="action-button grid" title="Grid View">
+                  </button>
+                </div>
+            </div>
+            
+            <div id="profile">
+                <div class="abt">
+                    <div class="profile">
+                        <div class="content">
+                            <div class="pic">
+                                <img src="/images/uploads/<%=user.profilePic%>" alt="">
+                                <form action="/photo" method="post" enctype="multipart/form-data">
+                                    <input type="file" id="file" name="image" >
+                                    <button type="submit" id="btn"></button>
+                                  </form>
+                            </div>
+                            <h2><%=user.name%></h2>
+                        </div>
+                    </div>
+                    <form action="/editProfile/<%=user.id%>" method="post">
+                      <div class="dets">
+                        <div class="box name">
+                            <div><span>First name</span> <textarea name="name"><%=user.name%></textarea></div>
+                            <div><span>Username</span> <textarea name="username"><%=user.username%></textarea></div>
+                        </div>
+                        <div class="box label">
+                            <span>Email</span> <textarea name="email"><%=user.email%></textarea>
+                        </div>
+                        <div class="box label">
+                            <span>Gender</span> <input type="radio" name="gender" value="Female">Female<input type="radio" name="gender" value="Male">Male
+                        </div>
+                        <div class="box label">
+                            <span>Phone No</span> <textarea name="phone" maxlength="10" minlength="10"><%=user.phone%></textarea>
+                        </div>
+                        <div class="box label">
+                            <span>Address</span> <textarea></textarea>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn" id="editbtn">Save</button> 
+                            <!-- <button class="btn" id="savebtn">Save</button> -->
+                            <p class="btn" style="display: inline-block;" id="savebtn">Edit</p>
+                           
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+</div>
+<script src="/javascripts/sc.js"></script>
+
+<script>
+    document.querySelector(".pic").addEventListener("click",function(){    console.log("click");
+        document.querySelector("#file").click()
+    })
+
+    document.querySelector("#file").addEventListener("change",function(){
+        console.log("click");
+        document.querySelector("#btn").click();
+    })
+
+    document.querySelector("#savebtn").addEventListener("click",function(){
+      console.log("click");
+      document.querySelector("#editbtn").style.display="initial";
+      document.querySelector("#savebtn").style.display="none"
+    })
+
+    // document.querySelector("#editbtn").addEventListener("click")
+</script>
+
+</body>
+</html>

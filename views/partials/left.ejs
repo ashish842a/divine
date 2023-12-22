@@ -1,0 +1,20 @@
+<div class="left">
+    <div class="myaccount">
+        <div class="pic">
+            <img id="img" src="./images/uploads/<%=user.profilePic%>" alt="">
+        </div>
+        <form id="form" action="/photo" method="post" enctype="multipart/form-data">
+         <input type="file" id="pic" placeholder="file" name="image">
+         <button type="submit" id="filebtn">Submit</button>
+        </form>
+        <div class="name">Ashish Kumar</div>
+    </div>
+
+    <div class="options">
+        <h4><a href="/profile">HOME</a></h4>
+        <h4><a href="/dashboard">PROFILE</a></h4>
+        <h4><a href="/dashboard-order">ORDER</a></h4>
+        <h4><a href="/contact">CONTACT</a></h4>
+        <h4><a href="/cart">Your Cart</a></h4>
+    </div>
+</div>
